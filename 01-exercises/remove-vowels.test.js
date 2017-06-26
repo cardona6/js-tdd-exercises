@@ -14,7 +14,24 @@
 
 function removeVowels(phrase) {
     return phrase.replace(/[aeiou]/g, '');
+     var result = '';
+    for (var i = 0; i < phrase.length; i++) {
+        var phrase = words[i];
+        if (phrase !== 'A' && phrase !== 'E' && phrase !== 'I' && phrase !== 'O' && phrase !== 'U') {
+            result += phrase;
+        }
+    }
+    console.log(result);
 }
+
+shortcut("goodbye");
+shortcut("nodegirls");
+shortcut('hor are you today?');
+
+test('that contains CAPITAL vowel letters',function(){
+    var removeVowels = [];
+    expect(position).toEqual([]);
+});
 
 /*
 This is a sample test - remove it and write AT LEAST 5 more tests to prove the function works as expected  

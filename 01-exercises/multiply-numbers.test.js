@@ -11,3 +11,19 @@
         3. Refactor if needed
         4. REPEAT
  */
+function multiplies(number){
+    var result = [];
+for (var i = 0; i <= number.length; i++) {
+       if (i % 2 === 0 ){
+        console.log([i]);
+    }else if (i % 3 === 0) {
+        console.log([i]);
+    }else{
+        console.log(i);
+    }
+
+test('multiply numbers = 8 and 18', function(){
+    var result = multiplies(number)
+    expect(result).toEqual([8,18])
+});
+
