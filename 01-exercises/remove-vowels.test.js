@@ -13,26 +13,29 @@
  */
 
 function removeVowels(phrase) {
-    return phrase.replace(/[aeiou]/g, '');
-     var result = '';
-    for (var i = 0; i < phrase.length; i++) {
-        var phrase = words[i];
-        if (phrase !== 'A' && phrase !== 'E' && phrase !== 'I' && phrase !== 'O' && phrase !== 'U') {
-            result += phrase;
-        }
-    }
-    console.log(result);
+    return phrase.replace(/[aeiouAEIOU]/g, '');
+  
 }
 
-shortcut("goodbye");
-shortcut("nodegirls");
-shortcut('hor are you today?');
-
-test('that contains CAPITAL vowel letters',function(){
-    var removeVowels = [];
-    expect(position).toEqual([]);
+test('when remove Vowels from goodbye ',function(){
+    var result = removeVowels("goodbye");
+    expect(result).toEqual("gdby");
 });
 
+test('when remove Vowels from nodegirls ',function(){
+    var result = removeVowels("nodegirls");
+    expect(result).toEqual("ndgrls");
+});
+
+test('when remove Vowels from how are you today ',function(){
+    var result = removeVowels("how are you today");
+    expect(result).toEqual("hw r y tdy");
+});
+
+test ('when remove Vowels from hEllo',function(){
+    var result = removeVowels("hEllo");
+    expect(result).toEqual("hll");
+});
 /*
 This is a sample test - remove it and write AT LEAST 5 more tests to prove the function works as expected  
 test('removeVowels should remove the Os', function(){
